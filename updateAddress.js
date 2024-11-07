@@ -3,6 +3,7 @@ const url = 'https://go-wash-api.onrender.com/api/auth/address/'
 const savedHtml = localStorage.getItem("updateAddress");
 
 const address = document.createElement("section");
+address.id = 'addresses'
 address.innerHTML = savedHtml;
 
 document.body.appendChild(address)
@@ -38,6 +39,6 @@ document.getElementById("updateButton").addEventListener("click", async () => {
 
     if(response.ok){
         alert("Endereço atualizado com sucesso")
-        window.location.href = 'index.html'
+        location.href = 'index.html'
     }
 })
